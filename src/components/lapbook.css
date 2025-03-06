@@ -1,0 +1,54 @@
+:root {
+    --height: 80vh;
+}
+
+.triptico {
+    position: relative;
+    width: calc(var(--height) * 0.8);
+    height: var(--height);
+    display: flex;
+    perspective: 1000px;
+    background-color: #fff;
+}
+
+.panel {
+    width: 100%;
+    height: 100%;
+    background-color: #e9e6c4;
+    position: absolute;
+    top: 0;
+    transition: transform 2s ease-in-out;
+    transform-origin: left;
+}
+
+.center {
+    background-color: #fff;
+
+}
+
+.left {
+    width: 50%;
+    z-index: 3;
+    left: 0;
+    background-color: #fff;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: rotateY(0deg);
+}
+
+.right {
+    width: 50%;
+    z-index: 3;
+    right: 0;
+    background-color: #fff;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    transform-origin: right;
+    transform: rotateY(0deg);
+}
+
+.triptico .left .open{
+    transform: rotateY(-180deg);
+}
+
+.triptico .right .open {
+    transform: rotateY(180deg);
+}
