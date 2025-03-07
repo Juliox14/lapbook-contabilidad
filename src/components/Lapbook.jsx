@@ -10,9 +10,9 @@ export default function Lapbook() {
 
     return (
         <div className="triptico">
-            <div className="panel left" onClick={handleClick}><p>Hola mundo</p></div>
+            <div className={`panel left ${open ? "open" : ""}`} onClick={handleClick}><p>Hola mundo</p></div>
             <div className="panel center"></div>
-            <div className="panel right 1|" onClick={handleClick}></div>
+            <div className={`panel right ${open ? "open" : ""}`} onClick={handleClick}></div>
         </div>
     )
 };
