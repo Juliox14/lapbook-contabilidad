@@ -1,3 +1,4 @@
+import AcordeonHexa from "./acordeonHexa";
 import "./lapbook.css";
 import { useState } from "react";
 
@@ -13,6 +14,7 @@ export default function Lapbook() {
             <div className={`panel left ${open ? "open" : ""}`} onClick={handleClick}><p>Hola mundo</p></div>
             <div className="panel center"></div>
             <div className={`panel right ${open ? "open" : ""}`} onClick={handleClick}></div>
+            <AcordeonHexa />
         </div>
     )
 };
